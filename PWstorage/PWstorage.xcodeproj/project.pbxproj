@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21DC2ACC52E92E0CC4E5B13F /* Pods_PWstorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E5ECB323F0A6AFA2668E998 /* Pods_PWstorage.framework */; };
 		DC903CDB1FA8143B00B8D5DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC903CDA1FA8143B00B8D5DB /* AppDelegate.swift */; };
 		DC903CE01FA8143B00B8D5DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC903CDE1FA8143B00B8D5DB /* Main.storyboard */; };
 		DC903CE21FA8143B00B8D5DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC903CE11FA8143B00B8D5DB /* Assets.xcassets */; };
@@ -14,9 +15,13 @@
 		DC903CED1FA8162800B8D5DB /* PwTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC903CEC1FA8162800B8D5DB /* PwTableViewCell.swift */; };
 		DC903CEF1FA8196B00B8D5DB /* PwTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC903CEE1FA8196B00B8D5DB /* PwTableViewController.swift */; };
 		DC903CF11FA81C1C00B8D5DB /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC903CF01FA81C1C00B8D5DB /* App.swift */; };
+		DCFBE7571FB83E3200C8049E /* AddAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFBE7561FB83E3200C8049E /* AddAppViewController.swift */; };
+		DCFBE7591FB8424E00C8049E /* AppList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFBE7581FB8424E00C8049E /* AppList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		544CEC4C27BBB1EAECF8A75A /* Pods-PWstorage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PWstorage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PWstorage/Pods-PWstorage.debug.xcconfig"; sourceTree = "<group>"; };
+		9E5ECB323F0A6AFA2668E998 /* Pods_PWstorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PWstorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC903CD71FA8143B00B8D5DB /* PWstorage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PWstorage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC903CDA1FA8143B00B8D5DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC903CDF1FA8143B00B8D5DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -26,6 +31,10 @@
 		DC903CEC1FA8162800B8D5DB /* PwTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PwTableViewCell.swift; sourceTree = "<group>"; };
 		DC903CEE1FA8196B00B8D5DB /* PwTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PwTableViewController.swift; sourceTree = "<group>"; };
 		DC903CF01FA81C1C00B8D5DB /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		DCFBE7551FB83BAD00C8049E /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCFBE7561FB83E3200C8049E /* AddAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAppViewController.swift; sourceTree = "<group>"; };
+		DCFBE7581FB8424E00C8049E /* AppList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppList.swift; sourceTree = "<group>"; };
+		E7609AF949161CC45880E682 /* Pods-PWstorage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PWstorage.release.xcconfig"; path = "Pods/Target Support Files/Pods-PWstorage/Pods-PWstorage.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +42,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21DC2ACC52E92E0CC4E5B13F /* Pods_PWstorage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		060E3AAC13074142E32A0C29 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				544CEC4C27BBB1EAECF8A75A /* Pods-PWstorage.debug.xcconfig */,
+				E7609AF949161CC45880E682 /* Pods-PWstorage.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		229810C34294FBD49CDCF01C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DCFBE7551FB83BAD00C8049E /* Realm.framework */,
+				9E5ECB323F0A6AFA2668E998 /* Pods_PWstorage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DC903CCE1FA8143B00B8D5DB = {
 			isa = PBXGroup;
 			children = (
 				DC903CD91FA8143B00B8D5DB /* PWstorage */,
 				DC903CD81FA8143B00B8D5DB /* Products */,
+				060E3AAC13074142E32A0C29 /* Pods */,
+				229810C34294FBD49CDCF01C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +96,8 @@
 				DC903CE11FA8143B00B8D5DB /* Assets.xcassets */,
 				DC903CE31FA8143B00B8D5DB /* LaunchScreen.storyboard */,
 				DC903CE61FA8143B00B8D5DB /* Info.plist */,
+				DCFBE7561FB83E3200C8049E /* AddAppViewController.swift */,
+				DCFBE7581FB8424E00C8049E /* AppList.swift */,
 			);
 			path = PWstorage;
 			sourceTree = "<group>";
@@ -77,9 +109,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC903CE91FA8143B00B8D5DB /* Build configuration list for PBXNativeTarget "PWstorage" */;
 			buildPhases = (
+				599B32498637B6F857D6DA4F /* [CP] Check Pods Manifest.lock */,
 				DC903CD31FA8143B00B8D5DB /* Sources */,
 				DC903CD41FA8143B00B8D5DB /* Frameworks */,
 				DC903CD51FA8143B00B8D5DB /* Resources */,
+				B2AE2BD168CAC3D8ABFD7C05 /* [CP] Embed Pods Frameworks */,
+				AF3A1B36E82122FE0FFEEA21 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -137,13 +172,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		599B32498637B6F857D6DA4F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PWstorage-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF3A1B36E82122FE0FFEEA21 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PWstorage/Pods-PWstorage-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2AE2BD168CAC3D8ABFD7C05 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PWstorage/Pods-PWstorage-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PWstorage/Pods-PWstorage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DC903CD31FA8143B00B8D5DB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				DC903CEF1FA8196B00B8D5DB /* PwTableViewController.swift in Sources */,
+				DCFBE7591FB8424E00C8049E /* AppList.swift in Sources */,
 				DC903CED1FA8162800B8D5DB /* PwTableViewCell.swift in Sources */,
+				DCFBE7571FB83E3200C8049E /* AddAppViewController.swift in Sources */,
 				DC903CF11FA81C1C00B8D5DB /* App.swift in Sources */,
 				DC903CDB1FA8143B00B8D5DB /* AppDelegate.swift in Sources */,
 			);
@@ -280,11 +373,13 @@
 		};
 		DC903CEA1FA8143B00B8D5DB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 544CEC4C27BBB1EAECF8A75A /* Pods-PWstorage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5GEUY7T2XK;
 				INFOPLIST_FILE = PWstorage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kaorihirata.PWstorage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -295,11 +390,13 @@
 		};
 		DC903CEB1FA8143B00B8D5DB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7609AF949161CC45880E682 /* Pods-PWstorage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5GEUY7T2XK;
 				INFOPLIST_FILE = PWstorage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kaorihirata.PWstorage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
