@@ -53,4 +53,16 @@ class PwTableViewController: UITableViewController {
         cell.appName.text = app.title
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete{
+            let appCollection = realm.objects(AppRealm.self)
+            let app = appCollection[indexPath.row]
+            print("app \(app)")
+            try! realm.write() {
+                realm.delete(app)
+            }
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+        }
+    }
 }
