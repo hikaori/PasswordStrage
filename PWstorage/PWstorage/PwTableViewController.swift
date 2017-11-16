@@ -10,9 +10,6 @@ import UIKit
 import RealmSwift
 
 class PwTableViewController: UITableViewController {
-    var app1 = App(title: "fb")
-    var app2 = App(title: "twitter")
-    var app3 = App(title: "linkdin")
     var apps = [AppRealm]()
     var token: NotificationToken?
     
@@ -21,11 +18,6 @@ class PwTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        apps.append(app1)
-//        apps.append(app2)
-//        apps.append(app3)
-        
-        print("AppFromRealm\(apps)")
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,7 +25,6 @@ class PwTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -54,6 +45,7 @@ class PwTableViewController: UITableViewController {
         return cell
     }
     
+    // Mark: delete selected item from tableview and realm data
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCellEditingStyle.delete{
             let appCollection = realm.objects(AppRealm.self)

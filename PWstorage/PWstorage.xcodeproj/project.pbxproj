@@ -16,7 +16,6 @@
 		DC903CEF1FA8196B00B8D5DB /* PwTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC903CEE1FA8196B00B8D5DB /* PwTableViewController.swift */; };
 		DC903CF11FA81C1C00B8D5DB /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC903CF01FA81C1C00B8D5DB /* App.swift */; };
 		DCFBE7571FB83E3200C8049E /* AddAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFBE7561FB83E3200C8049E /* AddAppViewController.swift */; };
-		DCFBE7591FB8424E00C8049E /* AppList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFBE7581FB8424E00C8049E /* AppList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +32,6 @@
 		DC903CF01FA81C1C00B8D5DB /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		DCFBE7551FB83BAD00C8049E /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCFBE7561FB83E3200C8049E /* AddAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAppViewController.swift; sourceTree = "<group>"; };
-		DCFBE7581FB8424E00C8049E /* AppList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppList.swift; sourceTree = "<group>"; };
 		E7609AF949161CC45880E682 /* Pods-PWstorage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PWstorage.release.xcconfig"; path = "Pods/Target Support Files/Pods-PWstorage/Pods-PWstorage.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,7 +95,6 @@
 				DC903CE31FA8143B00B8D5DB /* LaunchScreen.storyboard */,
 				DC903CE61FA8143B00B8D5DB /* Info.plist */,
 				DCFBE7561FB83E3200C8049E /* AddAppViewController.swift */,
-				DCFBE7581FB8424E00C8049E /* AppList.swift */,
 			);
 			path = PWstorage;
 			sourceTree = "<group>";
@@ -234,7 +231,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC903CEF1FA8196B00B8D5DB /* PwTableViewController.swift in Sources */,
-				DCFBE7591FB8424E00C8049E /* AppList.swift in Sources */,
 				DC903CED1FA8162800B8D5DB /* PwTableViewCell.swift in Sources */,
 				DCFBE7571FB83E3200C8049E /* AddAppViewController.swift in Sources */,
 				DC903CF11FA81C1C00B8D5DB /* App.swift in Sources */,

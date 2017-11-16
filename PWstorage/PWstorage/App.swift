@@ -9,10 +9,6 @@
 import Foundation
 import RealmSwift
 
-struct App {
-     var title : String
-}
-
 class AppRealm: Object {
     @objc dynamic var title = ""
 }
