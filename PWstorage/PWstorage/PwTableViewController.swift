@@ -10,7 +10,6 @@ import UIKit
 import RealmSwift
 
 class PwTableViewController: UITableViewController {
-    var apps = [AppRealm]()
     
     // Get the default Realm
     let realm = try! Realm()
@@ -29,6 +28,20 @@ class PwTableViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "editPW"{
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let appCollection = realm.objects(AppRealm.self)
+                let app = appCollection[indexPath.row]
+                let controller = segue.destination as! AddNewAppViewController
+                // set selected data to 'appReam' propaty in AddAppViewController
+                controller.appRealm = app
+            }
+        }else if segue.identifier == "addNewPW" {
+            
+        }
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {

@@ -91,10 +91,10 @@
 				DC903CDE1FA8143B00B8D5DB /* Main.storyboard */,
 				DC903CEE1FA8196B00B8D5DB /* PwTableViewController.swift */,
 				DC903CEC1FA8162800B8D5DB /* PwTableViewCell.swift */,
+				DCFBE7561FB83E3200C8049E /* AddAppViewController.swift */,
 				DC903CE11FA8143B00B8D5DB /* Assets.xcassets */,
 				DC903CE31FA8143B00B8D5DB /* LaunchScreen.storyboard */,
 				DC903CE61FA8143B00B8D5DB /* Info.plist */,
-				DCFBE7561FB83E3200C8049E /* AddAppViewController.swift */,
 			);
 			path = PWstorage;
 			sourceTree = "<group>";

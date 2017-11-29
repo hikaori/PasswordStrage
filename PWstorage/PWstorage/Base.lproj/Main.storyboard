@@ -37,7 +37,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="appName" destination="DRi-7G-p9P" id="qF5-aF-oCT"/>
-                                    <segue destination="j7x-x2-HSU" kind="show" id="GR8-pq-QAh"/>
+                                    <segue destination="j7x-x2-HSU" kind="show" identifier="editPW" id="GR8-pq-QAh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -49,14 +49,14 @@
                     <navigationItem key="navigationItem" id="tXH-mm-zjc">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="IM5-RL-Dpw">
                             <connections>
-                                <segue destination="j7x-x2-HSU" kind="presentation" identifier="AddNewAppSeg" id="PIW-oz-Lhg"/>
+                                <segue destination="j7x-x2-HSU" kind="presentation" identifier="addNewPW" id="Ata-hw-kWO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aji-3j-FjU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-204" y="132.68365817091455"/>
+            <point key="canvasLocation" x="191" y="133"/>
         </scene>
         <!--Add New App View Controller-->
         <scene sceneID="xEB-9z-nlP">
@@ -121,7 +121,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JRt-bk-Jut" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="926" y="133"/>
+            <point key="canvasLocation" x="1332" y="133"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FGp-1g-gFU">
@@ -143,6 +143,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="GR8-pq-QAh"/>
+        <segue reference="Ata-hw-kWO"/>
     </inferredMetricsTieBreakers>
 </document>

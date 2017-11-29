@@ -15,12 +15,21 @@ class AddNewAppViewController: UIViewController {
     @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     var isEditMode: Bool?
+    var appRealm: AppRealm?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // if appRealm is not nil ('PwTableViewCell' selected), this method run
+        if let appRealm = appRealm {
+            titleField.text = appRealm.title
+            passwordField.text = appRealm.password
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
