@@ -12,10 +12,12 @@ class PwTableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var appName: UILabel!
-    
+//    @IBOutlet weak var appPassword: UILabel!
     override func awakeFromNib() {
+        
         super.awakeFromNib()
         // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

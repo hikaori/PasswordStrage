@@ -11,4 +11,6 @@ import RealmSwift
 
 class AppRealm: Object {
     @objc dynamic var title = ""
+    @objc dynamic var password = ""
 }
+

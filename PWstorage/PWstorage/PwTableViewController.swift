@@ -11,15 +11,21 @@ import RealmSwift
 
 class PwTableViewController: UITableViewController {
     var apps = [AppRealm]()
-    var token: NotificationToken?
     
     // Get the default Realm
     let realm = try! Realm()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("start")
     }
-
+    
+    // reload tableView
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -42,6 +48,7 @@ class PwTableViewController: UITableViewController {
         let appCollection = realm.objects(AppRealm.self)
         let app = appCollection[indexPath.row]
         cell.appName.text = app.title
+//        cell.appPassword.text = app.password
         return cell
     }
     

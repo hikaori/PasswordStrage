@@ -14,6 +14,8 @@ class AddNewAppViewController: UIViewController {
  
     @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    var isEditMode: Bool?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,15 +26,22 @@ class AddNewAppViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func AddNewApp(_ sender: UIButton) {
+    @IBAction func AddNewPassword(_ sender: Any) {
         print("add")
         let realm = try! Realm()
         let newApp = AppRealm()
         newApp.title = titleField.text!
+        newApp.password = passwordField.text!
         print(newApp)
         try! realm.write() {
             realm.add(newApp)
         }
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func cancel(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
     
 
