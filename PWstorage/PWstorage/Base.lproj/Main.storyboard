@@ -26,10 +26,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="86.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Yg-KL-FXM">
-                                            <rect key="frame" x="16" y="11" width="60" height="60"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRi-7G-p9P">
                                             <rect key="frame" x="109" y="31" width="231" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -41,8 +37,6 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="appName" destination="DRi-7G-p9P" id="qF5-aF-oCT"/>
-                                    <outlet property="image" destination="6Yg-KL-FXM" id="5WC-Fu-PgR"/>
-                                    <outlet property="imageView" destination="6Yg-KL-FXM" id="u3x-yZ-nMr"/>
                                     <segue destination="j7x-x2-HSU" kind="show" identifier="editPW" id="GR8-pq-QAh"/>
                                 </connections>
                             </tableViewCell>

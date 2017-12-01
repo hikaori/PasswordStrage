@@ -31,7 +31,7 @@ class AddNewAppViewController: UIViewController,UIImagePickerControllerDelegate,
         if let appRealm = appRealm {
             titleField.text = appRealm.title
             passwordField.text = appRealm.password
-            let imageFromData = UIImage(data: appRealm.imageData as! Data)
+            let imageFromData = UIImage(data: appRealm.imageData! as Data)
             imageView.image = imageFromData
         }
     }
@@ -60,7 +60,12 @@ class AddNewAppViewController: UIViewController,UIImagePickerControllerDelegate,
     
     
     @IBAction func cancel(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+        guard let isEdit = isEditMode else { return }
+        if isEdit {
+            navigationController?.popViewController(animated: true)
+        } else {
+            dismiss(animated: true, completion: nil)
+        }
     }
     
     func openGallary()
@@ -74,7 +79,7 @@ class AddNewAppViewController: UIViewController,UIImagePickerControllerDelegate,
 //ImagePickerView Delegate Methods
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
     {
-        var chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         imageView.contentMode = .scaleAspectFit
         imageView.image = chosenImage
         imageData = NSData(data: UIImagePNGRepresentation(chosenImage)!)
