@@ -11,8 +11,10 @@ import UIKit
 class PwTableViewCell: UITableViewCell {
 
     
+    
     @IBOutlet weak var appName: UILabel!
-//    @IBOutlet weak var appPassword: UILabel!
+   
+    
     override func awakeFromNib() {
         
         super.awakeFromNib()

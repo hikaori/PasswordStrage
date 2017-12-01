@@ -12,5 +12,6 @@ import RealmSwift
 class AppRealm: Object {
     @objc dynamic var title = ""
     @objc dynamic var password = ""
+    @objc dynamic var imageData:NSData? = nil
 }
 
