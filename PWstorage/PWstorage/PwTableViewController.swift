@@ -39,9 +39,12 @@ class PwTableViewController: UITableViewController {
                 // set selected data to 'appReam' propaty in AddAppViewController
                 controller.appRealm = app
                 controller.isEditMode = true
+                let index = indexPath.row
+                controller.id = String(index)
             }
         }else if segue.identifier == "addNewPW" {
-            
+            let controller = segue.destination as! AddNewAppViewController
+            controller.isEditMode = false
         }
     }
 

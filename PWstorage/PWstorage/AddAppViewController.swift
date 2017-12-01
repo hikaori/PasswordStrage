@@ -11,7 +11,7 @@ import RealmSwift
 
 class AddNewAppViewController: UIViewController,UIImagePickerControllerDelegate,UIPopoverControllerDelegate,UINavigationControllerDelegate {
 
- 
+    
     @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
@@ -19,6 +19,7 @@ class AddNewAppViewController: UIViewController,UIImagePickerControllerDelegate,
     var appRealm: AppRealm?
     var picker:UIImagePickerController?=UIImagePickerController()
     var imageData:NSData?
+    var id : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,7 @@ class AddNewAppViewController: UIViewController,UIImagePickerControllerDelegate,
             passwordField.text = appRealm.password
             let imageFromData = UIImage(data: appRealm.imageData! as Data)
             imageView.image = imageFromData
+            id = appRealm.id
         }
     }
     
@@ -45,15 +47,26 @@ class AddNewAppViewController: UIViewController,UIImagePickerControllerDelegate,
         openGallary()
     }
     @IBAction func AddNewPassword(_ sender: Any) {
-        print("add")
         let realm = try! Realm()
         let newApp = AppRealm()
+        
         newApp.title = titleField.text!
         newApp.password = passwordField.text!
         newApp.imageData = imageData
+        newApp.id = UUID().uuidString
         print(newApp)
+        
         try! realm.write() {
-            realm.add(newApp)
+//            realm.add(newApp)
+            guard let isEdit = isEditMode else { return }
+            if isEdit {
+                newApp.id = self.id!
+                realm.add(newApp, update: true)
+                navigationController?.popViewController(animated: true)
+            } else {
+                realm.add(newApp)
+                dismiss(animated: true, completion: nil)
+            }
         }
         dismiss(animated: true, completion: nil)
     }
@@ -74,7 +87,6 @@ class AddNewAppViewController: UIViewController,UIImagePickerControllerDelegate,
         picker!.sourceType = UIImagePickerControllerSourceType.photoLibrary
         present(picker!, animated: true, completion: nil)
     }
-    
     
 //ImagePickerView Delegate Methods
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
