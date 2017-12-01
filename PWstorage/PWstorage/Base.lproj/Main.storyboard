@@ -33,10 +33,15 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iqT-re-JB8">
+                                            <rect key="frame" x="16" y="11" width="60" height="60"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="appName" destination="DRi-7G-p9P" id="qF5-aF-oCT"/>
+                                    <outlet property="imageForCell" destination="iqT-re-JB8" id="h5i-mW-NNp"/>
                                     <segue destination="j7x-x2-HSU" kind="show" identifier="editPW" id="GR8-pq-QAh"/>
                                 </connections>
                             </tableViewCell>

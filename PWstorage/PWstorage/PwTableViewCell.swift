@@ -10,8 +10,10 @@ import UIKit
 
 class PwTableViewCell: UITableViewCell {
     
+    
     @IBOutlet weak var appName: UILabel!
-   
+    @IBOutlet weak var imageForCell: UIImageView!
+    
     override func awakeFromNib() {
         
         super.awakeFromNib()

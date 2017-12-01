@@ -65,7 +65,8 @@ class PwTableViewController: UITableViewController {
         let appCollection = realm.objects(AppRealm.self)
         let app = appCollection[indexPath.row]
         cell.appName.text = app.title
-//        cell.appPassword.text = app.password
+        let image = UIImage(data:app.imageData! as Data)
+        cell.imageForCell.image = image
         return cell
     }
     
