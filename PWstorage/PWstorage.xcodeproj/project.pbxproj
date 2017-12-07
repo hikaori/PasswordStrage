@@ -15,6 +15,7 @@
 		DC903CED1FA8162800B8D5DB /* PwTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC903CEC1FA8162800B8D5DB /* PwTableViewCell.swift */; };
 		DC903CEF1FA8196B00B8D5DB /* PwTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC903CEE1FA8196B00B8D5DB /* PwTableViewController.swift */; };
 		DC903CF11FA81C1C00B8D5DB /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC903CF01FA81C1C00B8D5DB /* App.swift */; };
+		DCBBDAF01FD3CC020081B175 /* MakePWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBBDAEF1FD3CC020081B175 /* MakePWViewController.swift */; };
 		DCFBE7571FB83E3200C8049E /* AddAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFBE7561FB83E3200C8049E /* AddAppViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		DC903CEC1FA8162800B8D5DB /* PwTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PwTableViewCell.swift; sourceTree = "<group>"; };
 		DC903CEE1FA8196B00B8D5DB /* PwTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PwTableViewController.swift; sourceTree = "<group>"; };
 		DC903CF01FA81C1C00B8D5DB /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		DCBBDAEF1FD3CC020081B175 /* MakePWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakePWViewController.swift; sourceTree = "<group>"; };
 		DCFBE7551FB83BAD00C8049E /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCFBE7561FB83E3200C8049E /* AddAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAppViewController.swift; sourceTree = "<group>"; };
 		E7609AF949161CC45880E682 /* Pods-PWstorage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PWstorage.release.xcconfig"; path = "Pods/Target Support Files/Pods-PWstorage/Pods-PWstorage.release.xcconfig"; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				DC903CE11FA8143B00B8D5DB /* Assets.xcassets */,
 				DC903CE31FA8143B00B8D5DB /* LaunchScreen.storyboard */,
 				DC903CE61FA8143B00B8D5DB /* Info.plist */,
+				DCBBDAEF1FD3CC020081B175 /* MakePWViewController.swift */,
 			);
 			path = PWstorage;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				DC903CEF1FA8196B00B8D5DB /* PwTableViewController.swift in Sources */,
 				DC903CED1FA8162800B8D5DB /* PwTableViewCell.swift in Sources */,
 				DCFBE7571FB83E3200C8049E /* AddAppViewController.swift in Sources */,
+				DCBBDAF01FD3CC020081B175 /* MakePWViewController.swift in Sources */,
 				DC903CF11FA81C1C00B8D5DB /* App.swift in Sources */,
 				DC903CDB1FA8143B00B8D5DB /* AppDelegate.swift in Sources */,
 			);

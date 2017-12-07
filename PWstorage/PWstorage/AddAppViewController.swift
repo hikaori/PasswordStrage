@@ -16,6 +16,7 @@ class AddNewAppViewController: UIViewController,UIImagePickerControllerDelegate,
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     var isEditMode: Bool?
+    var isClickedImage: Bool?
     var appRealm: AppRealm?
     var picker:UIImagePickerController?=UIImagePickerController()
     var imageData:NSData?
@@ -33,8 +34,19 @@ class AddNewAppViewController: UIViewController,UIImagePickerControllerDelegate,
             titleField.text = appRealm.title
             passwordField.text = appRealm.password
             let imageFromData = UIImage(data: appRealm.imageData! as Data)
-            imageView.image = imageFromData
-            id = appRealm.id
+            
+            // set appRealm data to AddNewAppViewController's propaty
+            self.id = appRealm.id
+            
+            //
+            
+            // this method for update image when user try to change image from previouse image
+            if(isClickedImage!){
+                // selected image will be set self.imageData
+            }else{
+               imageView.image = imageFromData
+               self.imageData = appRealm.imageData
+            }
         }
     }
     
@@ -44,6 +56,7 @@ class AddNewAppViewController: UIViewController,UIImagePickerControllerDelegate,
     }
     
     @IBAction func Gallery(_ sender: Any) {
+        isClickedImage = true
         openGallary()
     }
     @IBAction func AddNewPassword(_ sender: Any) {
@@ -57,10 +70,10 @@ class AddNewAppViewController: UIViewController,UIImagePickerControllerDelegate,
         print(newApp)
         
         try! realm.write() {
-//            realm.add(newApp)
             guard let isEdit = isEditMode else { return }
             if isEdit {
                 newApp.id = self.id!
+                newApp.imageData = self.imageData
                 realm.add(newApp, update: true)
                 navigationController?.popViewController(animated: true)
             } else {
